@@ -1,0 +1,144 @@
+.profile {
+  display: flex;
+  flex-direction: row;
+  background-color: #ffffff;
+  max-width: 1230px;
+  margin: 0 auto;
+  margin-block: 15px;
+  border-radius: 10px;
+  
+  &__left {
+    padding: 40px; 
+    display: flex;
+    flex-direction: column;
+    gap: 25px
+  }
+  &__right {
+    padding: 40px;
+    width: 100%;
+  }
+
+  &__photo {
+    width: 220px;
+    height: 220px;
+    border-radius: 10px;
+    border: 1px solid black;
+  }
+
+  &__name {
+    font-size: 20px;
+    line-height: 24px;
+    color: #000000;
+    margin: 0;
+  }
+
+  &__gmail {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 28px;
+    color: #666666;
+    margin: 0;
+  }
+  &__tabs {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  &__button-select {
+    background: #ffffff;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    width: 200px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 16px;
+    font-size: 14px;
+    font-weight: 500;
+    color: #333;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+        svg {
+      transition: transform 0.3s ease;
+    }
+    &:hover {
+      background: #f2f2f2;
+      border-color: #aaa;
+    }
+
+    &--active {
+      background: #1ABA1A;
+      color: #ffffff;
+      border-color: #1ABA1A;
+      font-weight: 600;
+      &:hover {
+        background: darkgreen;
+      }
+
+      svg {
+        transform: rotate(90deg);
+        fill: #ffffff;
+      }
+    }
+  }
+  &__section {
+    
+    &--account {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 25px 40px;
+      margin: 0 auto;
+    }    
+    &--orders {
+      
+    }    
+    &--address {
+      
+    }    
+    &--password {
+      
+    }
+  }
+  &__title {
+    line-height: 29px;
+    &--account {
+      grid-column: 1 / -1;
+      margin: 0;
+    }
+  }
+  &__label {
+    font-size: 14px;
+    line-height: 21px;
+    display: flex;
+    align-items: center;
+    color: #000000;
+  }
+  &__input {
+    padding: 12px;
+    background: #FFFFFF;
+    border: 1px solid #CCCCCC;
+    border-radius: 6px;
+    width: 100%;
+  }
+
+  &__button {
+    grid-column: 1 / -1; /* Кнопка на весь рядок */
+    padding: 10px;
+    width: 125px;
+    height: 50px;
+    background: #1ABA1A;
+    color: white;
+    border-radius: 10px;
+    border-color: #1ABA1A;
+    border: 1px solid #ccc;
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+    &:hover {
+      background: darkgreen;
+    }
+  }
+
+  &__description {
+  }
+}
