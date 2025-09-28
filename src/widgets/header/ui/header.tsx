@@ -1,6 +1,8 @@
 import { useState, useMemo } from 'react'
 import logo from '../../../shared/assets/icons/cyper-logo.svg'
 import '../../../pages/home/Home.scss'
+import './header.scss'
+import { CatalogMenu } from '../../catalogMenu'
 
 export const Header = () => {
  const [query, setQuery] = useState("");
@@ -9,7 +11,7 @@ export const Header = () => {
     setQuery(e.target.value);
   };
   return (
-    <header className="header">
+    <>
       <div className="banner">
         <span className="banner__badge">Special</span>
           <p className="banner__text">
@@ -27,7 +29,7 @@ export const Header = () => {
           </div>
         </div>
 
-
+<CatalogMenu />
         <div className="search">
           <input
             type="text"
@@ -80,7 +82,7 @@ export const Header = () => {
           </nav>
         </div>
       </div>
-    </header>
+    </>
   )
 }
 

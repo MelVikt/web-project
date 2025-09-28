@@ -39,45 +39,48 @@ export const Catalog: React.FC = () => {
   return (
   <>
   <Header />
- <div className="catalog-page">
-      <aside className="sidebar">
-        <h2>Категорії</h2>
-        <ul>
-          {categories.map((cat) => (
-            <li
-              key={cat}
-              className={cat === selectedCategory ? "active" : ""}
-              onClick={() => setSelectedCategory(cat)}
-            >
-              {cat}
-            </li>
-          ))}
-        </ul>
-
-        <h3>Бренди</h3>
-        {brands.map((brand) => (
-          <label key={brand}>
-            <input
-              type="checkbox"
-              checked={selectedBrands.includes(brand)}
-              onChange={() => toggleBrand(brand)}
-            />
-            {brand}
-          </label>
+  {/* <div className="catalog-page">
+    <aside className="sidebar">
+      <h2>Категорії</h2>
+      <ul>
+        {categories.map((cat) => (
+          <li
+            key={cat}
+            className={cat === selectedCategory ? "active" : ""}
+            onClick={() => setSelectedCategory(cat)}
+          >
+            {cat}
+          </li>
         ))}
-      </aside>
+      </ul>
 
-      <main className="product-grid">
-        {filteredProducts.map((product) => (
-          <article key={product.id} className="product-card">
-            <img src={product.img} alt={product.name} />
-            <h4>{product.name}</h4>
-            <p>Ціна: ${product.price}</p>
-            <button>Купити</button>
-          </article>
-        ))}
-      </main>
-    </div>
+      <h3>Бренди</h3>
+      {brands.map((brand) => (
+        <label key={brand}>
+          <input
+            type="checkbox"
+            checked={selectedBrands.includes(brand)}
+            onChange={() => toggleBrand(brand)}
+          />
+          {brand}
+        </label>
+      ))}
+    </aside>
+
+    <main className="product-grid">
+      {filteredProducts.map((product) => (
+        <article key={product.id} className="product-card">
+          <img src={product.img} alt={product.name} />
+          <h4>{product.name}</h4>
+          <p>Ціна: ${product.price}</p>
+          <button>Купити</button>
+        </article>
+      ))}
+    </main>
+  </div> */}
+  <div className=''>
+    
+  </div>
   <Footer />
   </>
   )

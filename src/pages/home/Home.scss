@@ -52,12 +52,17 @@ $social-colors: (
 
 
 .branding {
+  position: sticky;
+  top: 0;
+  z-index: 10;
   display: flex;
   align-items: center;
   background-color: $secondary-color;
   padding-inline: 25px;
   gap: 20px;
   justify-content: center;
+  
+  
   &__logo {  
     display: flex;
     align-items: center; 
