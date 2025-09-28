@@ -1,64 +1,116 @@
+// src/widgets/catalogMenu/ui/CatalogMenu.tsx
 import React, { useEffect, useRef, useState } from "react";
 import "./CatalogMenu.scss";
 import catalogData, { type CatalogCategory } from "../model/catalogData";
 
-export const CatalogMenu: React.FC = () => {
-  const [isOpen, setIsOpen] = useState(false);
-  const [menuPosition, setMenuPosition] = useState({ top: 0, left: 0});
-
-
-  const menuRef = useRef <HTMLDivElement>(null)
-  const buttonRef = useRef<HTMLButtonElement>(null);
-
-  const toggleMenu = () => {
-    if (!isOpen && buttonRef.current) {
-      const rect = buttonRef.current.getBoundingClientRect() 
-      setMenuPosition({
-        top: rect.bottom,
-        left: rect.left,
-      });
-    }    
-      setIsOpen((prev) => !prev);
-  };
-  
-  
-  useEffect (() => {
-    const handleClickOutside = (event: MouseEvent) => {
-      if (menuRef.current && !menuRef.current.contains(event.target as Node)) {
-        setIsOpen(false);
-      }
-    };  
-    document.addEventListener("mousedown", handleClickOutside);  
-      return () => {
-        document.removeEventListener ("mousedown", handleClickOutside);
-      };
-    }, []);
-
-  return (
-    <>
-      <div className="catalog-wrapper">
-        <button className="catalog-button" onClick={toggleMenu} ref={buttonRef}>Каталог</button>
-
-        {isOpen && (
-          <>
-          <div className="catalog-menu-container" ref={menuRef}></div>
-            <div className="overlay" />
-            <div className="catalog-dropdown" ref={menuRef} style={{ position: "absolute", top: menuPosition.top, left: menuPosition.left }}>
-              {catalogData.map((category: CatalogCategory, index: number) => (
-                <div className="catalog-column" key={index}>
-                  <h3>{category.title}</h3>
-                  <ul>
-                    {category.subcategories.map((item: string, subIndex: number) => (
-                      <li key={subIndex}>{item}</li>
-                    ))}
-                  </ul>
-                </div>
-              ))}
-            </div>
-          </>
-        )}
-      </div>
-    </>
-  );
+type Props = {
+  headerRef: React.RefObject<HTMLDivElement | null>;
 };
 
+export const CatalogMenu: React.FC<Props> = ({ headerRef }) => {
+  const [isOpen, setIsOpen] = useState(false);
+  const [menuTop, setMenuTop] = useState<number>(0);
+
+  const menuRef = useRef<HTMLDivElement | null>(null);
+  const buttonRef = useRef<HTMLButtonElement | null>(null);
+
+const updatePosition = () => {
+  if (headerRef?.current) {
+    const rect = headerRef.current.getBoundingClientRect();
+    setMenuTop(rect.bottom); // без scrollY
+  } else {
+    setMenuTop(0);
+  }
+};
+
+  const toggleMenu = () => {
+    if (!isOpen) {
+      updatePosition();
+    }
+    setIsOpen((p) => !p);
+  };
+
+  useEffect(() => {
+    if (!isOpen) return;
+    const handler = () => updatePosition();
+    window.addEventListener("resize", handler);
+    window.addEventListener("scroll", handler, { passive: true });
+    return () => {
+      window.removeEventListener("resize", handler);
+      window.removeEventListener("scroll", handler);
+    };
+  }, [isOpen, headerRef]);
+
+  // Закрытие по клику вне меню / вне кнопки
+// Закрытие по клику вне меню / вне кнопки
+useEffect(() => {
+  const handleClickOutside = (ev: MouseEvent) => {
+    const target = ev.target as Node;
+
+    // 1. Якщо це клік по скролбару – ігноруємо
+    if (ev.clientX >= document.documentElement.clientWidth) {
+      return; // клік в області вертикального скролбара
+    }
+
+    if (
+      menuRef.current &&
+      !menuRef.current.contains(target) &&
+      buttonRef.current &&
+      !buttonRef.current.contains(target)
+    ) {
+      setIsOpen(false);
+    }
+  };
+
+  document.addEventListener("click", handleClickOutside);
+  return () => document.removeEventListener("click", handleClickOutside);
+}, []);
+
+
+  return (
+    <div className="catalog-wrapper">
+      <button className="catalog-button" onClick={toggleMenu} ref={buttonRef}>
+        Каталог
+      </button>
+
+      {isOpen && (
+        <>
+          {/* overlay начинается под хедером */}
+          <div
+            className="overlay"
+            style={{
+              top: menuTop,
+              bottom: 0,
+            }}
+          />
+
+          {/* fixed, центр, max-width 1440px */}
+          <div
+            className="catalog-dropdown"
+            ref={menuRef}
+            style={{
+              position: "fixed",
+              top: menuTop,
+              left: "50%",
+              transform: "translateX(-50%)",
+              width: "100%",
+              maxWidth: 1440, // React числом превратит в 1440px
+              zIndex: 2000,
+            }}
+          >
+            {catalogData.map((category: CatalogCategory, index: number) => (
+              <div className="catalog-column" key={index}>
+                <h3>{category.title}</h3>
+                <ul>
+                  {category.subcategories.map((item: string, subIndex: number) => (
+                    <li key={subIndex}>{item}</li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </div>
+        </>
+      )}
+    </div>
+  );
+};

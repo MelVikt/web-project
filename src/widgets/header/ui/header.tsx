@@ -1,4 +1,4 @@
-import { useState, useMemo } from 'react'
+import { useState, useMemo, useRef } from 'react'
 import logo from '../../../shared/assets/icons/cyper-logo.svg'
 import '../../../pages/home/Home.scss'
 import './header.scss'
@@ -6,7 +6,7 @@ import { CatalogMenu } from '../../catalogMenu'
 
 export const Header = () => {
  const [query, setQuery] = useState("");
-
+  const headerRef = useRef<HTMLDivElement | null>(null);
   const handleSearch: React.ChangeEventHandler<HTMLInputElement> = (e) => {
     setQuery(e.target.value);
   };
@@ -20,7 +20,7 @@ export const Header = () => {
           </p>
       </div>
 
-      <div className='branding'>
+      <div className='branding' ref={headerRef}>
         <div className="branding__logo">
           <img src= {logo} alt="logo" className="branding__image" />
           <div className="branding__text">
@@ -29,7 +29,8 @@ export const Header = () => {
           </div>
         </div>
 
-<CatalogMenu />
+        <CatalogMenu headerRef={headerRef} />
+
         <div className="search">
           <input
             type="text"
