@@ -88,15 +88,6 @@ useEffect(() => {
           <div
             className="catalog-dropdown"
             ref={menuRef}
-            style={{
-              position: "fixed",
-              top: menuTop,
-              left: "50%",
-              transform: "translateX(-50%)",
-              width: "100%",
-              maxWidth: 1440, // React числом превратит в 1440px
-              zIndex: 2000,
-            }}
           >
             {catalogData.map((category: CatalogCategory, index: number) => (
               <div className="catalog-column" key={index}>
