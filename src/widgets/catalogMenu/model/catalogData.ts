@@ -366,38 +366,29 @@ const catalogData: CatalogCategory[] = [
         title: "Відеокамери",
         subcategories: [
           { title: "Екшн-камери" },
-          { title: "" },
-          { title: "" },
-          { title: "" },
-          { title: "" },
-
-
+          { title: "Портативні камери" },
+          { title: "Камкордери" },
+          { title: "Panasonic" },
+          { title: "Камери для влогів і стрімінгу" }, 
+          { title: "Кінематографічні камери" },
+          { title: "SJCAM" },
+          { title: "Sony" },
+          { title: "GoPro" },
+          { title: "DJI" },
+          { title: "Canon" },
         ]
       },    
       {
         title: "Об'єктиви",
         subcategories: [
-          { title: "" },
-          { title: "" },
-
+          { title: "Макрооб’єктиви" },
+          { title: "Телеоб’єктиви" },
+          { title: "Ширококутні об’єктиви" },
+          { title: "Об’єктиви з ефектом «риб’яче око»" },
+          { title: "Об’єктиви з фіксованою фокусною відстанню" },
+          { title: "Об’єктиви зі змінною фокусною відстанню"},
         ]
-      },   
-      {
-        title: "Фотопринтеры ",
-        subcategories: [
-          { title: "" },
-          { title: "" },
-
-        ]
-      },   
-      {
-        title: "Фотокамери миттєвого друку ",
-        subcategories: [
-          { title: "" },
-          { title: "" },
-
-        ]
-      },         
+      },        
       {
         title: "Аксесуари до фото/відео",
         subcategories: [
@@ -419,27 +410,50 @@ const catalogData: CatalogCategory[] = [
       {
         title: "Телевізори",
         subcategories: [
-          { title: "Смарт телевізори" },
-          { title: "4K / UHD телевізори" },
+          { title: "Samsung" },
+          { title: "LG"},
           { title: "OLED / QLED телевізори" },
-
-          { title: "Аксесуари для телевізорів" },
-
-          { title: "Кріплення для ТВ" },
-
-          { title: "" },
-
-          { title: "" },
-
-
+          { title: "Sony" },
+          { title: "2Е" },
+          { title: "TCL" },
+          { title: "Hisense" },
         ]
       },        
       {
-        title: "",
+        title: "Projectors",
         subcategories: [
-          { title: "" },
-          { title: "" },
-
+          { title: "Samsung" },
+          { title: "Acer" },          
+          { title: "Asus" },
+          { title: "Epson" },          
+          { title: "Panasonic" },
+          { title: "Проєкційні екрани" },          
+          { title: "Опції до проєкторів" },
+          { title: "Тримач для проєктора" },          
+        ]
+      },   
+      {
+        title: "Аудіосистеми для ТВ",
+        subcategories: [
+          { title: "Саундбари"},
+          { title: "Сабвуфери"},
+          { title: "Бездротові колонки для ТВ"},
+          { title: "Акустичні системи"},
+          { title: "AV-ресивери" },
+          { title: "Підсилювачі звуку" }
+        ]
+      },
+      {
+        title: "Аксесуари для ТБ",
+        subcategories: [
+          { title: "Настінне кріплення для TV"},
+          { title: "Рамки для телевізорів Frame"},
+          { title: "Кабелі"},
+          { title: "Спеціальні пульти ДК"},
+          { title: "Елементи живлення та зарядні пристрої"},
+          { title: "Джерело безперебійного живлення (ДБЖ)"},
+          { title: "Роутери" },
+          { title: "Мережеві фільтри" },
         ]
       },   
     ],
@@ -447,11 +461,58 @@ const catalogData: CatalogCategory[] = [
   {
     title: "Audio",
     subcategories: [
+      {
+        title: "Навушники",
+        subcategories: [
+          { title: "Apple"},
+          { title: "JBL"},
+          { title: "Sony"},
+          { title: "Samsung"},
+          { title: ""},
+          { title: ""},
 
+        ]
+      },  
+      {
+        title: "Акустика",
+        subcategories: [
+          { title: ""},
+          { title: ""},
+          { title: ""},
+          { title: ""},
+          { title: ""},
+          { title: ""},
+
+        ]
+      },  
+      {
+        title: "Мікрофони",
+        subcategories: [
+          { title: ""},
+          { title: ""},
+          { title: ""},
+          { title: ""},
+          { title: ""},
+          { title: ""},
+
+        ]
+      },  
+      {
+        title: "Аксесуари для навушників",
+        subcategories: [
+          { title: ""},
+          { title: ""},
+          { title: ""},
+          { title: ""},
+          { title: ""},
+          { title: ""},
+
+        ]
+      },  
     ],
   },
   {
-    title: "Аксесуари для гаджетів",
+    title: "Портативна електроніка",
     subcategories: [
 
     ],
