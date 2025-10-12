@@ -468,44 +468,43 @@ const catalogData: CatalogCategory[] = [
           { title: "JBL"},
           { title: "Sony"},
           { title: "Samsung"},
-          { title: ""},
-          { title: ""},
+          { title: "Xiaomi"},
+          { title: "Beats"},
 
         ]
       },  
       {
         title: "Акустика",
         subcategories: [
-          { title: ""},
-          { title: ""},
-          { title: ""},
-          { title: ""},
-          { title: ""},
-          { title: ""},
-
-        ]
-      },  
-      {
-        title: "Мікрофони",
-        subcategories: [
-          { title: ""},
-          { title: ""},
-          { title: ""},
-          { title: ""},
-          { title: ""},
+          { title: "Портативна акустика"},
+          { title: "Саундбари"},
+          { title: "Bluetooth колонки"},
+          { title: "Мультирум системи"},
+          { title: "Автомобільна акустика"},
           { title: ""},
 
         ]
       },  
+    {
+      "title": "Мікрофони",
+      subcategories: [
+        { title: "Студійні мікрофони" },
+        { title: "Петличні мікрофони" },
+        { title: "USB-мікрофони" },
+        { title: "Мікрофони для стрімінгу" },
+        { title: "Бездротові мікрофони" },
+        { title: "Конденсаторні мікрофони" }
+      ]
+    }, 
       {
         title: "Аксесуари для навушників",
         subcategories: [
-          { title: ""},
-          { title: ""},
-          { title: ""},
-          { title: ""},
-          { title: ""},
-          { title: ""},
+          { title: "Амбушюри"},
+          { title: "Чохли"},
+          { title: "Кабелі"},
+          { title: "Адаптери"},
+          { title: "Зарядні кейси"},
+          { title: "Тримачі для навушників"},
 
         ]
       },  
@@ -514,7 +513,42 @@ const catalogData: CatalogCategory[] = [
   {
     title: "Портативна електроніка",
     subcategories: [
+      {
+        title: "Мобільні пристрої",
+        subcategories: [
+          { title: "Смартфони"},
+          { title: "планшети "},
+          { title: "електронні книги"},
+          { title: "Розумні годинники"},
+          { title: "Фітнес-браслети"},
+          { title: "GPS-навігатори"},
 
+        ]
+      },  
+            {
+        title: "Носимі пристрої",
+        subcategories: [
+          { title: "MP3-плеєри"},
+          { title: "портативні колонки"},
+          { title: "навушники"},
+          { title: "камери"},
+          { title: "портативні ігрові консолі"},
+          { title: "Портативні зарядні станції:"},
+
+        ]
+      },  
+            {
+        title: "Інше",
+        subcategories: [
+          { title: "Портативні сканери"},
+          { title: "принтери"},
+          { title: "автомобільні відеореєстратори"},
+          { title: "Портативні проектори"},
+          { title: "Електронні перекладачі"},
+          { title: "Портативні Wi-Fi роутери"},
+
+        ]
+      },  
     ],
   },
 ];
