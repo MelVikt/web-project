@@ -97,6 +97,15 @@ useEffect(() => {
                 <li className="catalog__left-item"><a className="catalog__left-link" href="№">Mobile & Gadgets</a></li>
                 <li className="catalog__left-item"><a className="catalog__left-link" href="№">Mobile & Gadgets</a></li>
                 <li className="catalog__left-item"><a className="catalog__left-link" href="№">Mobile & Gadgets</a></li>
+                        <li className="catalog__left-item"><a className="catalog__left-link" href="№">Mobile & Gadgets</a></li>
+                <li className="catalog__left-item"><a className="catalog__left-link" href="№">Mobile & Gadgets</a></li>
+                <li className="catalog__left-item"><a className="catalog__left-link" href="№">Mobile & Gadgets</a></li>
+                <li className="catalog__left-item"><a className="catalog__left-link" href="№">Mobile & Gadgets</a></li>
+                <li className="catalog__left-item"><a className="catalog__left-link" href="№">Mobile & Gadgets</a></li>
+                <li className="catalog__left-item"><a className="catalog__left-link" href="№">Mobile & Gadgets</a></li>
+                <li className="catalog__left-item"><a className="catalog__left-link" href="№">Mobile & Gadgets</a></li>
+                <li className="catalog__left-item"><a className="catalog__left-link" href="№">Mobile & Gadgets</a></li>
+                
               </ul>
             </div>
             <div className="catalog__right">
