@@ -1,3 +1,23 @@
 body {
   background-color: #E2E4EB;
 }
+/* Глобальні стилі для кастомного скроллбару */
+body::-webkit-scrollbar {
+  width: 12px;               /* Ширина вертикального скроллбару */
+  height: 12px;              /* Висота горизонтального скроллбару */
+}
+
+body::-webkit-scrollbar-track {
+  background: rgb(20, 36, 92); /* Фон треку */
+  border-radius: 10px;
+}
+
+body::-webkit-scrollbar-thumb {
+  background: rgb(244, 145, 19); /* Колір "повзунка" */
+  border-radius: 10px;
+  border: 2px solid rgb(247, 200, 0); /* Рамка навколо повзунка */
+}
+
+body::-webkit-scrollbar-thumb:hover {
+  background: rgb(247, 200, 0); /* Колір повзунка при наведенні */
+}

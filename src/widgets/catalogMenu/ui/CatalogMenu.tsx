@@ -89,22 +89,20 @@ useEffect(() => {
           >
             <div className="catalog__left">
               <ul className="catalog__left-list">
-                <li className="catalog__left-item"><a className="catalog__left-link" href="№">Mobile & Gadgets</a></li>
-                <li className="catalog__left-item"><a className="catalog__left-link" href="№">Mobile & Gadgets</a></li>
-                <li className="catalog__left-item"><a className="catalog__left-link" href="№">Mobile & Gadgets</a></li>
-                <li className="catalog__left-item"><a className="catalog__left-link" href="№">Mobile & Gadgets</a></li>
-                <li className="catalog__left-item"><a className="catalog__left-link" href="№">Mobile & Gadgets</a></li>
-                <li className="catalog__left-item"><a className="catalog__left-link" href="№">Mobile & Gadgets</a></li>
-                <li className="catalog__left-item"><a className="catalog__left-link" href="№">Mobile & Gadgets</a></li>
-                <li className="catalog__left-item"><a className="catalog__left-link" href="№">Mobile & Gadgets</a></li>
-                        <li className="catalog__left-item"><a className="catalog__left-link" href="№">Mobile & Gadgets</a></li>
-                <li className="catalog__left-item"><a className="catalog__left-link" href="№">Mobile & Gadgets</a></li>
-                <li className="catalog__left-item"><a className="catalog__left-link" href="№">Mobile & Gadgets</a></li>
-                <li className="catalog__left-item"><a className="catalog__left-link" href="№">Mobile & Gadgets</a></li>
-                <li className="catalog__left-item"><a className="catalog__left-link" href="№">Mobile & Gadgets</a></li>
-                <li className="catalog__left-item"><a className="catalog__left-link" href="№">Mobile & Gadgets</a></li>
-                <li className="catalog__left-item"><a className="catalog__left-link" href="№">Mobile & Gadgets</a></li>
-                <li className="catalog__left-item"><a className="catalog__left-link" href="№">Mobile & Gadgets</a></li>
+                <li className="catalog__left-item"><a className="catalog__left-link" href="№"><span>Mobile & Gadgets</span><span>&#10095;</span></a></li>
+                <li className="catalog__left-item"><a className="catalog__left-link" href="№"><span>Mobile & Gadgets</span><span>&#10095;</span></a></li>
+                <li className="catalog__left-item"><a className="catalog__left-link" href="№"><span>Mobile & Gadgets</span><span>&#10095;</span></a></li>
+                <li className="catalog__left-item"><a className="catalog__left-link" href="№"><span>Mobile & Gadgets</span><span>&#10095;</span></a></li>
+                <li className="catalog__left-item"><a className="catalog__left-link" href="№"><span>Mobile & Gadgets</span><span>&#10095;</span></a></li>
+                <li className="catalog__left-item"><a className="catalog__left-link" href="№"><span>Mobile & Gadgets</span><span>&#10095;</span></a></li>
+                <li className="catalog__left-item"><a className="catalog__left-link" href="№"><span>Mobile & Gadgets</span><span>&#10095;</span></a></li>
+                <li className="catalog__left-item"><a className="catalog__left-link" href="№"><span>Mobile & Gadgets</span><span>&#10095;</span></a></li>
+                           <li className="catalog__left-item"><a className="catalog__left-link" href="№"><span>Mobile & Gadgets</span><span>&#10095;</span></a></li>
+                <li className="catalog__left-item"><a className="catalog__left-link" href="№"><span>Mobile & Gadgets</span><span>&#10095;</span></a></li>
+                           <li className="catalog__left-item"><a className="catalog__left-link" href="№"><span>Mobile & Gadgets</span><span>&#10095;</span></a></li>
+                <li className="catalog__left-item"><a className="catalog__left-link" href="№"><span>Mobile & Gadgets</span><span>&#10095;</span></a></li>
+                <li className="catalog__left-item"><a className="catalog__left-link" href="№"><span>Mobile & Gadgets</span><span>&#10095;</span></a></li>
+
                 
               </ul>
             </div>
