@@ -97,9 +97,9 @@ useEffect(() => {
                 <li className="catalog__left-item"><a className="catalog__left-link" href="№"><span>Mobile & Gadgets</span><span>&#10095;</span></a></li>
                 <li className="catalog__left-item"><a className="catalog__left-link" href="№"><span>Mobile & Gadgets</span><span>&#10095;</span></a></li>
                 <li className="catalog__left-item"><a className="catalog__left-link" href="№"><span>Mobile & Gadgets</span><span>&#10095;</span></a></li>
-                           <li className="catalog__left-item"><a className="catalog__left-link" href="№"><span>Mobile & Gadgets</span><span>&#10095;</span></a></li>
                 <li className="catalog__left-item"><a className="catalog__left-link" href="№"><span>Mobile & Gadgets</span><span>&#10095;</span></a></li>
-                           <li className="catalog__left-item"><a className="catalog__left-link" href="№"><span>Mobile & Gadgets</span><span>&#10095;</span></a></li>
+                <li className="catalog__left-item"><a className="catalog__left-link" href="№"><span>Mobile & Gadgets</span><span>&#10095;</span></a></li>
+                <li className="catalog__left-item"><a className="catalog__left-link" href="№"><span>Mobile & Gadgets</span><span>&#10095;</span></a></li>
                 <li className="catalog__left-item"><a className="catalog__left-link" href="№"><span>Mobile & Gadgets</span><span>&#10095;</span></a></li>
                 <li className="catalog__left-item"><a className="catalog__left-link" href="№"><span>Mobile & Gadgets</span><span>&#10095;</span></a></li>
 
@@ -112,6 +112,10 @@ useEffect(() => {
               <ul className="catalog__category-list">
                 <li className="catalog__category-item"><a className="catalog__category-link" href="№">Apple iPhone</a></li>
                 <li className="catalog__category-item"><a className="catalog__category-link" href="№">Samsung</a></li>
+                <li className="catalog__category-item"><a className="catalog__category-link" href="№">Asus</a></li>
+                <li className="catalog__category-item"><a className="catalog__category-link" href="№">Xiaomi</a></li>
+                <li className="catalog__category-item"><a className="catalog__category-link" href="№">Nokia</a></li>
+                <li className="catalog__category-item"><a className="catalog__category-link" href="№">Motorola</a></li>
                 <li className="catalog__category-item"><a className="catalog__category-link" href="№">Asus</a></li>
                 <li className="catalog__category-item"><a className="catalog__category-link" href="№">Xiaomi</a></li>
                 <li className="catalog__category-item"><a className="catalog__category-link" href="№">Nokia</a></li>
