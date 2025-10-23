@@ -552,7 +552,7 @@ const catalogData: CatalogCategory[] = [
     ],
   },
   {
-  title: "Інші категорії",
+  title: "Всі категорії",
   subcategories: [],
   },
 ];

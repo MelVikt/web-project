@@ -23,13 +23,17 @@
     left: 50%;
     top: 150.4px;
     transform: translateX(-50%);
-    max-width: 1240px;
-    max-height: 544px;
+    max-width: 1280px;
+    height: 417px;
     width: 100%;
     background-color: white;
     display: flex;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     z-index: 999;
+    &--no-fullwidth {
+      background-color: transparent; // ⬅️ прибирає білий фон
+      box-shadow: none; // опційно, якщо не потрібна тінь
+    }
   }
   &__left {
     width: 300px;
@@ -37,7 +41,9 @@
     border-right: 1px solid #ddd;
     overflow-y: auto;
     max-height: 70vh; // или 400px, или под высоту окна
-
+    color: #555;
+    font-size: 13px;
+    letter-spacing: .15px;
     &-list {
       padding-left: 0;
       margin: 0;
@@ -47,19 +53,23 @@
       cursor: pointer;
       border-bottom: 1px solid #ddd;
       list-style-type: none;
+      &:hover {
+        box-shadow:4px 1px 7px -2px #c5c5c5, 0 2px 7px -2px #c5c5c5;
+        color: #555;
+        font-size: 15px;
+        font-weight: 700;
+      }
     }
     &-link {
-      color: #000;
+      color: #3b3838;
       text-decoration: none;
-          display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    text-decoration: none;
-    color: inherit;
-      &:hover {
-        color: #555;
-      }
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+      text-decoration: none;
+      color: inherit;
+
     }
   }
 
@@ -77,15 +87,13 @@
 
   &__category {
     padding: 0;
-    width: 100%;
-    border-bottom: 1px solid #ddd; // добавляем подчеркивание
-    padding-bottom: 10px; // немного пространства перед линией
-    margin-bottom: 10px; // сохраняем расстояние между блоками
+
 
     &-title {
-      font-size: 13px;
+      font-size: 14px;
       font-weight: 600;
       margin-bottom: 4px;
+      line-height: 1.1;
 
       .catalog__category-link {
         color: #000;
@@ -108,13 +116,15 @@
     &-item {
       list-style: none;
       line-height: 1.2;
+      
 
       .catalog__category-link {
         color: #333;
         text-decoration: none;
-        font-size: 12px;
         transition: color 0.15s ease;
-
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 1.1;
         &:hover {
           color: #007bff;
         }

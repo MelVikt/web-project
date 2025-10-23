@@ -10,6 +10,7 @@ type Props = {
 export const CatalogMenu: React.FC<Props> = ({ headerRef }) => {
   const [isOpen, setIsOpen] = useState(false);
   const [menuTop, setMenuTop] = useState<number>(0);
+  const [activeCategory, setActiveCategory] = useState<CatalogCategory | null>(catalogData[0]);
 
   const menuRef = useRef<HTMLDivElement | null>(null);
   const buttonRef = useRef<HTMLButtonElement | null>(null);
@@ -83,101 +84,53 @@ useEffect(() => {
             }}
           />
 
-          <div
-            className="catalog__dropdown"
-            ref={menuRef}
-          >
+            <div
+              className={`catalog__dropdown${activeCategory?.title === "Всі категорії" ? " catalog__dropdown--no-fullwidth" : ""}`}
+              ref={menuRef}
+            >
             <div className="catalog__left">
               <ul className="catalog__left-list">
-                <li className="catalog__left-item"><a className="catalog__left-link" href="№"><span>Mobile & Gadgets</span><span>&#10095;</span></a></li>
-                <li className="catalog__left-item"><a className="catalog__left-link" href="№"><span>Mobile & Gadgets</span><span>&#10095;</span></a></li>
-                <li className="catalog__left-item"><a className="catalog__left-link" href="№"><span>Mobile & Gadgets</span><span>&#10095;</span></a></li>
-                <li className="catalog__left-item"><a className="catalog__left-link" href="№"><span>Mobile & Gadgets</span><span>&#10095;</span></a></li>
-                <li className="catalog__left-item"><a className="catalog__left-link" href="№"><span>Mobile & Gadgets</span><span>&#10095;</span></a></li>
-                <li className="catalog__left-item"><a className="catalog__left-link" href="№"><span>Mobile & Gadgets</span><span>&#10095;</span></a></li>
-                <li className="catalog__left-item"><a className="catalog__left-link" href="№"><span>Mobile & Gadgets</span><span>&#10095;</span></a></li>
-                <li className="catalog__left-item"><a className="catalog__left-link" href="№"><span>Mobile & Gadgets</span><span>&#10095;</span></a></li>
-                <li className="catalog__left-item"><a className="catalog__left-link" href="№"><span>Mobile & Gadgets</span><span>&#10095;</span></a></li>
-                <li className="catalog__left-item"><a className="catalog__left-link" href="№"><span>Mobile & Gadgets</span><span>&#10095;</span></a></li>
-                <li className="catalog__left-item"><a className="catalog__left-link" href="№"><span>Mobile & Gadgets</span><span>&#10095;</span></a></li>
-                <li className="catalog__left-item"><a className="catalog__left-link" href="№"><span>Mobile & Gadgets</span><span>&#10095;</span></a></li>
-                <li className="catalog__left-item"><a className="catalog__left-link" href="№"><span>Mobile & Gadgets</span><span>&#10095;</span></a></li>
+                {catalogData.map((category) => (
+                  <li
+                    key={category.title}
+                    className="catalog__left-item"
+                    onMouseEnter={() => setActiveCategory(category)}
+                  >
+                    <a
+                      className="catalog__left-link"
+                      href={`/catalog/${encodeURIComponent(category.title)}`}
+                    >
+                      <span>{category.title}</span>
+                      <span>&#10095;</span>
+                    </a>
+                  </li>
 
-                
+                ))}
               </ul>
+
             </div>
-            <div className="catalog__right">
-            <nav className="catalog__category">
-              <h2 className="catalog__category-title"><a className="catalog__category-link" href="№">Smartphone</a></h2>
-              <ul className="catalog__category-list">
-                <li className="catalog__category-item"><a className="catalog__category-link" href="№">Apple iPhone</a></li>
-                <li className="catalog__category-item"><a className="catalog__category-link" href="№">Samsung</a></li>
-                <li className="catalog__category-item"><a className="catalog__category-link" href="№">Asus</a></li>
-                <li className="catalog__category-item"><a className="catalog__category-link" href="№">Xiaomi</a></li>
-                <li className="catalog__category-item"><a className="catalog__category-link" href="№">Nokia</a></li>
-                <li className="catalog__category-item"><a className="catalog__category-link" href="№">Motorola</a></li>
-                <li className="catalog__category-item"><a className="catalog__category-link" href="№">Asus</a></li>
-                <li className="catalog__category-item"><a className="catalog__category-link" href="№">Xiaomi</a></li>
-                <li className="catalog__category-item"><a className="catalog__category-link" href="№">Nokia</a></li>
-                <li className="catalog__category-item"><a className="catalog__category-link" href="№">Motorola</a></li>
-              </ul>
-            </nav>
-            <nav className="catalog__category">
-              <h2 className="catalog__category-title"><a className="catalog__category-link" href="№">Smartphone</a></h2>
-              <ul className="catalog__category-list">
-                <li className="catalog__category-item"><a className="catalog__category-link" href="№">Apple iPhone</a></li>
-                <li className="catalog__category-item"><a className="catalog__category-link" href="№">Samsung</a></li>
-                <li className="catalog__category-item"><a className="catalog__category-link" href="№">Asus</a></li>
-                <li className="catalog__category-item"><a className="catalog__category-link" href="№">Xiaomi</a></li>
-                <li className="catalog__category-item"><a className="catalog__category-link" href="№">Nokia</a></li>
-                <li className="catalog__category-item"><a className="catalog__category-link" href="№">Motorola</a></li>
-              </ul>
-            </nav>
-            <nav className="catalog__category">
-              <h2 className="catalog__category-title"><a className="catalog__category-link" href="№">Smartphone</a></h2>
-              <ul className="catalog__category-list">
-                <li className="catalog__category-item"><a className="catalog__category-link" href="№">Apple iPhone</a></li>
-                <li className="catalog__category-item"><a className="catalog__category-link" href="№">Samsung</a></li>
-                <li className="catalog__category-item"><a className="catalog__category-link" href="№">Asus</a></li>
-                <li className="catalog__category-item"><a className="catalog__category-link" href="№">Xiaomi</a></li>
-                <li className="catalog__category-item"><a className="catalog__category-link" href="№">Nokia</a></li>
-                <li className="catalog__category-item"><a className="catalog__category-link" href="№">Motorola</a></li>
-              </ul>
-            </nav>
-            <nav className="catalog__category">
-              <h2 className="catalog__category-title"><a className="catalog__category-link" href="№">Smartphone</a></h2>
-              <ul className="catalog__category-list">
-                <li className="catalog__category-item"><a className="catalog__category-link" href="№">Apple iPhone</a></li>
-                <li className="catalog__category-item"><a className="catalog__category-link" href="№">Samsung</a></li>
-                <li className="catalog__category-item"><a className="catalog__category-link" href="№">Asus</a></li>
-                <li className="catalog__category-item"><a className="catalog__category-link" href="№">Xiaomi</a></li>
-                <li className="catalog__category-item"><a className="catalog__category-link" href="№">Nokia</a></li>
-                <li className="catalog__category-item"><a className="catalog__category-link" href="№">Motorola</a></li>
-              </ul>
-            </nav>
-            <nav className="catalog__category">
-              <h2 className="catalog__category-title"><a className="catalog__category-link" href="№">Smartphone</a></h2>
-              <ul className="catalog__category-list">
-                <li className="catalog__category-item"><a className="catalog__category-link" href="№">Apple iPhone</a></li>
-                <li className="catalog__category-item"><a className="catalog__category-link" href="№">Samsung</a></li>
-                <li className="catalog__category-item"><a className="catalog__category-link" href="№">Asus</a></li>
-                <li className="catalog__category-item"><a className="catalog__category-link" href="№">Xiaomi</a></li>
-                <li className="catalog__category-item"><a className="catalog__category-link" href="№">Nokia</a></li>
-                <li className="catalog__category-item"><a className="catalog__category-link" href="№">Motorola</a></li>
-              </ul>
-            </nav>
-            <nav className="catalog__category">
-              <h2 className="catalog__category-title"><a className="catalog__category-link" href="№">Smartphone</a></h2>
-              <ul className="catalog__category-list">
-                <li className="catalog__category-item"><a className="catalog__category-link" href="№">Apple iPhone</a></li>
-                <li className="catalog__category-item"><a className="catalog__category-link" href="№">Samsung</a></li>
-                <li className="catalog__category-item"><a className="catalog__category-link" href="№">Asus</a></li>
-                <li className="catalog__category-item"><a className="catalog__category-link" href="№">Xiaomi</a></li>
-                <li className="catalog__category-item"><a className="catalog__category-link" href="№">Nokia</a></li>
-                <li className="catalog__category-item"><a className="catalog__category-link" href="№">Motorola</a></li>
-              </ul>
-            </nav>
-            </div>
+            {activeCategory?.title !== "Всі категорії" && Array.isArray(activeCategory?.subcategories) && (
+              <div className="catalog__right">
+                {activeCategory?.subcategories?.map((subcategory) => (
+                    <nav key={subcategory.title} className="catalog__category">
+                      <h2 className="catalog__category-title">
+                      <a className="catalog__category-link" href="#">
+                        {subcategory.title}
+                      </a>
+                    </h2>
+                    <ul className="catalog__category-list">
+                      {subcategory.subcategories?.map((item) =>(
+                        <li key={item.title} className="catalog__category-item">
+                          <a className="catalog__category-link" href="#">{item.title}</a>
+                        </li>
+                      ))}
+                    </ul>
+                  </nav>
+                ))}
+              </div>
+            )}
+
+
           </div>
         </>
       )}
