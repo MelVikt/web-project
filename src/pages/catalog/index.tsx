@@ -29,7 +29,7 @@ export const Catalog: React.FC = () => {
       prev.includes(brand) ? prev.filter((b) => b !== brand) : [...prev, brand]
     );
   };
-
+// 
   const filteredProducts = products.filter(
     (p) =>
       (selectedCategory === "Смартфони" ? true : true) && // тут можна додати фільтр по категорії
