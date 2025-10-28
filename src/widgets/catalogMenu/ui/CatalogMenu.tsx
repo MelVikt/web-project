@@ -87,6 +87,7 @@ useEffect(() => {
             <div
               className={`catalog__dropdown${activeCategory?.title === "Всі категорії" ? " catalog__dropdown--no-fullwidth" : ""}`}
               ref={menuRef}
+              style={{ top: `${menuTop}px` }}
             >
             <div className="catalog__left">
               <ul className="catalog__left-list">

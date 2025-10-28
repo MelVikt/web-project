@@ -8,8 +8,10 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faFacebook, faXTwitter, faYoutube, faInstagram, faCcPaypal, faCcVisa, faCcMastercard, faCcApplePay, faGooglePlay, faAppStoreIos} from '@fortawesome/free-brands-svg-icons';
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
 import { Header } from '../../widgets/header/index.ts';
-import { Footer } from '../../widgets/footer/index.ts';
-
+import { lazy, Suspense } from 'react';
+const Footer = lazy(() =>
+  import('../../widgets/footer/index.ts').then(module => ({ default: module.Footer }))
+);
 function Home() {
   
 //  const [query, setQuery] = useState("");
@@ -487,7 +489,9 @@ const visibleItems = useMemo(() => (
     </main>
 
 
-    <Footer />
+    <Suspense fallback={<div className="footer-loading">Loading footer...</div>}>
+  <Footer />
+</Suspense>
     {/* <footer className="footer">
       <div className="subscribe-banner">
         <p className="subscribe-banner__text">Subscribe & Get 10% OFF for first order</p>
